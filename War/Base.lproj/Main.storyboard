@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="War" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="4eQ-uu-dgM">
+                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TT9-2m-tqB">
+                                <rect key="frame" x="59" y="0.0" width="793" height="393"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwK-zd-moC" userLabel="WestView">
+                                        <rect key="frame" x="0.0" y="0.0" width="264.33333333333331" height="393"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nZP-Ex-CzV" userLabel="WestStackView">
+                                                <rect key="frame" x="0.0" y="16" width="264.33333333333331" height="377"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="West" translatesAutoresizingMaskIntoConstraints="NO" id="d9s-Fl-nNS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="264.33333333333331" height="318.33333333333331"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kN-By-bgw">
+                                                        <rect key="frame" x="79" y="318.33333333333331" width="106.66666666666669" height="58.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
+                                                        <color key="textColor" name="MainTitleColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="d9s-Fl-nNS" firstAttribute="leading" secondItem="nZP-Ex-CzV" secondAttribute="leading" id="SQw-ks-E74"/>
+                                                    <constraint firstAttribute="trailing" secondItem="d9s-Fl-nNS" secondAttribute="trailing" id="jP5-OB-oxp"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="WestView"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="nZP-Ex-CzV" secondAttribute="trailing" id="BLJ-Gd-f8z"/>
+                                            <constraint firstItem="nZP-Ex-CzV" firstAttribute="top" secondItem="kwK-zd-moC" secondAttribute="top" constant="16" id="LLA-Pw-08e"/>
+                                            <constraint firstAttribute="bottom" secondItem="nZP-Ex-CzV" secondAttribute="bottom" id="NMU-bU-2We"/>
+                                            <constraint firstItem="nZP-Ex-CzV" firstAttribute="leading" secondItem="kwK-zd-moC" secondAttribute="leading" id="gbO-I3-ssS"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-29-Wrt" userLabel="CenterView">
+                                        <rect key="frame" x="264.33333333333337" y="0.0" width="264.33333333333337" height="393"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="CenterView"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOf-xx-mGd" userLabel="EastView">
+                                        <rect key="frame" x="528.66666666666663" y="0.0" width="264.33333333333337" height="393"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LeY-dY-xYQ" userLabel="EastStackView">
+                                                <rect key="frame" x="0.0" y="16" width="264.33333333333331" height="377"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="East" translatesAutoresizingMaskIntoConstraints="NO" id="E2y-Eu-SEh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="264.33333333333331" height="316.66666666666669"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="East Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS5-Wc-4K8">
+                                                        <rect key="frame" x="84" y="316.66666666666669" width="96.333333333333314" height="60.333333333333314"/>
+                                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
+                                                        <color key="textColor" name="MainTitleColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="E2y-Eu-SEh" firstAttribute="leading" secondItem="LeY-dY-xYQ" secondAttribute="leading" id="gZk-He-nh0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="E2y-Eu-SEh" secondAttribute="trailing" id="mE8-kB-3Xh"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <accessibility key="accessibilityConfiguration" identifier="EastView"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="LeY-dY-xYQ" secondAttribute="bottom" id="EvV-tA-0LF"/>
+                                            <constraint firstAttribute="trailing" secondItem="LeY-dY-xYQ" secondAttribute="trailing" id="JF9-L7-Qo0"/>
+                                            <constraint firstItem="LeY-dY-xYQ" firstAttribute="top" secondItem="BOf-xx-mGd" secondAttribute="top" constant="16" id="PSW-xi-l0t"/>
+                                            <constraint firstItem="LeY-dY-xYQ" firstAttribute="leading" secondItem="BOf-xx-mGd" secondAttribute="leading" id="Ry9-GK-ybX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4eQ-uu-dgM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HQj-7B-NgL"/>
+                            <constraint firstItem="TT9-2m-tqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SzG-JN-7Vi"/>
+                            <constraint firstItem="TT9-2m-tqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tab-ZL-ZxA"/>
+                            <constraint firstAttribute="bottom" secondItem="4eQ-uu-dgM" secondAttribute="bottom" id="ZHE-Rs-Gn5"/>
+                            <constraint firstAttribute="trailing" secondItem="4eQ-uu-dgM" secondAttribute="trailing" id="b0l-VD-KMz"/>
+                            <constraint firstAttribute="bottom" secondItem="TT9-2m-tqB" secondAttribute="bottom" id="hoW-7x-Sax"/>
+                            <constraint firstItem="4eQ-uu-dgM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jo0-pL-6PP"/>
+                            <constraint firstAttribute="trailing" secondItem="TT9-2m-tqB" secondAttribute="trailing" id="vWF-66-IPG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="-10"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="East" width="85" height="167.66667175292969"/>
+        <image name="West" width="86" height="174"/>
+        <image name="background" width="750" height="500"/>
+        <namedColor name="MainTitleColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="landscape" appearance="dark"/>
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -84,7 +84,7 @@
                                                                 <color key="textColor" name="MainTitleColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dsdsds" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKo-Xg-ACq" userLabel="UserTextField">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKo-Xg-ACq" userLabel="UserTextField">
                                                                 <rect key="frame" x="22.333333333333371" y="45" width="220" height="40"/>
                                                                 <color key="backgroundColor" name="MainTitleColor"/>
                                                                 <constraints>
@@ -96,7 +96,7 @@
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kww-aE-8tj">
                                                                 <rect key="frame" x="74.666666666666686" y="101" width="115" height="30"/>
-                                                                <color key="backgroundColor" red="0.89690721650000005" green="0.17807059689999999" blue="0.266156589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" name="buttonColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="d1Q-ns-LGA"/>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="fw4-fo-N36"/>
@@ -114,7 +114,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnn-My-O9V">
                                                                 <rect key="frame" x="65.999999999999986" y="44" width="132.66666666666663" height="43.333333333333343"/>
-                                                                <color key="backgroundColor" red="0.89690721650000005" green="0.17807059689999999" blue="0.266156589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" name="buttonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <attributedString key="attributedTitle">
@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="-10"/>
+            <point key="canvasLocation" x="145" y="13"/>
         </scene>
     </scenes>
     <resources>
@@ -212,6 +212,9 @@
         <image name="background" width="750" height="500"/>
         <namedColor name="MainTitleColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="0.89690721650000005" green="0.17807059689999999" blue="0.266156589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

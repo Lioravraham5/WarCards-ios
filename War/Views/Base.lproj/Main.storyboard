@@ -260,10 +260,17 @@
                                                     <constraint firstAttribute="height" constant="50" id="Z9J-gl-oCz"/>
                                                     <constraint firstAttribute="width" constant="50" id="aEO-d9-TFq"/>
                                                 </constraints>
+                                                <color key="tintColor" name="MainTitleColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="stop.fill" catalog="system">
                                                     <color key="titleColor" name="MainTitleColor"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GcX-uw-mZG" userLabel="CenterStackView">
                                                 <rect key="frame" x="98.999999999999986" y="179" width="61.333333333333329" height="150"/>

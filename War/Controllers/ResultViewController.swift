@@ -9,6 +9,10 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +20,9 @@ class ResultViewController: UIViewController {
     }
     
 
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -12,7 +12,16 @@ class GameManager  {
     var scoreEast = 0
     var scoreWest = 0
     var roundCount = 0
+    
+    var userWest: String
+    var userEast: String
+    
     let maxRounds = 10
+    
+    init(userWest: String, userEast: String) {
+        self.userWest = userWest
+        self.userEast = userEast
+    }
     
     func drawCards() -> (Card, Card) {
         let cardWest = CardData.allCards.randomElement()!
@@ -36,10 +45,10 @@ class GameManager  {
     
     func getWinner() -> String {
         if scoreWest > scoreEast {
-            return "West"
+            return userWest
         }
         else if scoreWest < scoreEast {
-            return "East"
+            return userEast
         }
         else {
             return "Draw"

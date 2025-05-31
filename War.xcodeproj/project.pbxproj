@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FB79186A2DE9C5B7006F5361 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB7918692DE9C5B7006F5361 /* Location.gpx */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FBA6E5F42DD875DD00B0FFFE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB7918692DE9C5B7006F5361 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		FBA6E5DD2DD875DC00B0FFFE /* War.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = War.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA6E5F32DD875DD00B0FFFE /* WarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA6E5FD2DD875DD00B0FFFE /* WarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +93,7 @@
 		FBA6E5D42DD875DC00B0FFFE = {
 			isa = PBXGroup;
 			children = (
+				FB7918692DE9C5B7006F5361 /* Location.gpx */,
 				FBA6E5DF2DD875DC00B0FFFE /* War */,
 				FBA6E5F62DD875DD00B0FFFE /* WarTests */,
 				FBA6E6002DD875DD00B0FFFE /* WarUITests */,
@@ -225,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB79186A2DE9C5B7006F5361 /* Location.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,6 +53,15 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
         delegate?.didFailWithError(err: error)
     }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            self.clLocationManager.startUpdatingLocation()
+        } else if status == .denied || status == .restricted {
+            delegate?.didFailWithError(err: NSError(domain: "LocationErrorDomain", code: 1, userInfo: [NSLocalizedDescriptionKey: "Location Permissions Denied"]))
+
+        }
+    }
 }
 
 

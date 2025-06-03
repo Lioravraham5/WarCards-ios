@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="West" translatesAutoresizingMaskIntoConstraints="NO" id="QsY-hJ-aFR" userLabel="WestIMG">
-                                <rect key="frame" x="16" y="71.666666666666686" width="150" height="250"/>
+                                <rect key="frame" x="75" y="71.666666666666686" width="150" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="84D-k7-Vgo">
                                         <variation key="heightClass=regular-widthClass=compact" constant="100"/>
@@ -38,7 +38,7 @@
                                 </variation>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="East" translatesAutoresizingMaskIntoConstraints="NO" id="FTd-v0-jnl" userLabel="EastIMG">
-                                <rect key="frame" x="686" y="71.666666666666686" width="150" height="250"/>
+                                <rect key="frame" x="627" y="71.666666666666686" width="150" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="HhR-Ju-Vru">
                                         <variation key="heightClass=regular-widthClass=compact" constant="200"/>
@@ -55,7 +55,7 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tD-kg-68i">
-                                <rect key="frame" x="37.666666666666664" y="353" width="106.66666666666669" height="32"/>
+                                <rect key="frame" x="96.666666666666657" y="332" width="106.66666666666666" height="32"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
                                 <color key="textColor" name="MainTitleColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="East Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnS-E4-bW9">
-                                <rect key="frame" x="713" y="353" width="96.333333333333371" height="32"/>
+                                <rect key="frame" x="654" y="332" width="96.333333333333371" height="32"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
                                 <color key="textColor" name="MainTitleColor"/>
                                 <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="par-On-aGw">
-                                <rect key="frame" x="351" y="201.66666666666666" width="150" height="41.333333333333343"/>
+                                <rect key="frame" x="351" y="180.66666666666666" width="150" height="41.333333333333343"/>
                                 <color key="backgroundColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="WNn-3t-vnV">
@@ -228,13 +228,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="IAE-GT-xrw">
-                                <rect key="frame" x="0.0" y="16" width="852" height="361"/>
+                                <rect key="frame" x="59" y="16" width="793" height="361"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaG-gr-sfo" userLabel="WestView">
-                                        <rect key="frame" x="0.0" y="0.0" width="298.33333333333331" height="361"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="277.66666666666669" height="361"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User West" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-eA-FL6">
-                                                <rect key="frame" x="74.333333333333314" y="32" width="150" height="44"/>
+                                                <rect key="frame" x="64" y="32" width="150" height="44"/>
                                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="36"/>
                                                 <color key="textColor" name="MainTitleColor"/>
                                                 <nil key="highlightedColor"/>
@@ -243,7 +243,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score West" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yZ-Oj-m2A">
-                                                <rect key="frame" x="89" y="80" width="120.33333333333331" height="32"/>
+                                                <rect key="frame" x="78.666666666666657" y="80" width="120.33333333333334" height="32"/>
                                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
                                                 <color key="textColor" name="MainTitleColor"/>
                                                 <nil key="highlightedColor"/>
@@ -252,7 +252,7 @@
                                                 </variation>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_card" translatesAutoresizingMaskIntoConstraints="NO" id="vmY-Wy-qbe">
-                                                <rect key="frame" x="69.333333333333314" y="121" width="160" height="240"/>
+                                                <rect key="frame" x="59" y="121" width="160" height="240"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="bSa-T4-PPd">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="135"/>
@@ -290,10 +290,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIg-yf-neD" userLabel="CenterCiew">
-                                        <rect key="frame" x="298.33333333333331" y="0.0" width="276.99999999999994" height="361"/>
+                                        <rect key="frame" x="277.66666666666663" y="0.0" width="257.66666666666663" height="361"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-fh-4A5" userLabel="stopButton">
-                                                <rect key="frame" x="115.33333333333339" y="48" width="46.666666666666671" height="50"/>
+                                                <rect key="frame" x="105.66666666666664" y="48" width="46.666666666666671" height="50"/>
                                                 <color key="backgroundColor" name="buttonColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="0bP-nV-ktC">
@@ -323,7 +323,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="OlW-H2-eIV">
-                                                <rect key="frame" x="103.66666666666669" y="144" width="70" height="70"/>
+                                                <rect key="frame" x="94" y="144" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="Hrv-s2-GUv">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="60"/>
@@ -340,13 +340,13 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yea-ma-PXN">
-                                                <rect key="frame" x="107.99999999999999" y="230" width="61.333333333333329" height="32"/>
+                                                <rect key="frame" x="98.3333333333333" y="230" width="61.333333333333329" height="32"/>
                                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
                                                 <color key="textColor" name="MainTitleColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-5D-1VA" userLabel="ResultButton">
-                                                <rect key="frame" x="95" y="301.66666666666669" width="87" height="43.333333333333314"/>
+                                                <rect key="frame" x="85.333333333333314" y="301.66666666666669" width="87" height="43.333333333333314"/>
                                                 <color key="backgroundColor" name="buttonColor"/>
                                                 <color key="tintColor" name="MainTitleColor"/>
                                                 <state key="normal" title="Button"/>
@@ -387,10 +387,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqH-rh-0cZ" userLabel="EastView">
-                                        <rect key="frame" x="575.33333333333337" y="0.0" width="276.66666666666663" height="361"/>
+                                        <rect key="frame" x="535.33333333333337" y="0.0" width="257.66666666666663" height="361"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User East" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI8-fQ-GPj">
-                                                <rect key="frame" x="70.666666666666643" y="32" width="135.33333333333337" height="44"/>
+                                                <rect key="frame" x="61.333333333333272" y="32" width="135.33333333333337" height="44"/>
                                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="36"/>
                                                 <color key="textColor" name="MainTitleColor"/>
                                                 <nil key="highlightedColor"/>
@@ -399,7 +399,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score East" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJJ-ds-nFb">
-                                                <rect key="frame" x="83.333333333333258" y="80" width="109.66666666666669" height="32"/>
+                                                <rect key="frame" x="74" y="80" width="109.66666666666669" height="32"/>
                                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
                                                 <color key="textColor" name="MainTitleColor"/>
                                                 <nil key="highlightedColor"/>
@@ -408,7 +408,7 @@
                                                 </variation>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_card" translatesAutoresizingMaskIntoConstraints="NO" id="UQ5-XY-n0V">
-                                                <rect key="frame" x="58.333333333333258" y="121" width="160" height="240"/>
+                                                <rect key="frame" x="49" y="121" width="160" height="240"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="smc-Pp-qup">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="90"/>
@@ -605,8 +605,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BhG-dO-yr3"/>
-        <segue reference="byI-Vx-wmQ"/>
+        <segue reference="ehK-Fv-ntm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="East" width="85" height="167.66667175292969"/>

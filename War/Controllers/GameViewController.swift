@@ -22,10 +22,14 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var resultButton: UIButton!
     
+    var userName: String?
+    var userSide: String? // East or West
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("user name = \(userName!)")
+        print("user side = \(userSide!)")
     }
     
     @IBAction func stopOrResumeButtonPressed(_ sender: UIButton) {

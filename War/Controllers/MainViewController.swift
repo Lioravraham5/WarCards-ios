@@ -20,7 +20,7 @@ class MainViewController: UIViewController, LocationManagerDelegate {
     @IBOutlet weak var eastImage: UIImageView!
     @IBOutlet weak var eastLabel: UILabel!
     
-    let USER_DEFAULTS_USER_NAME_KEY = "userName"
+    let MAIN_TO_GAME_SEGUE_IDENTIFIER = "MainToGame"
     
     let locationManager = LocationManager()
     
@@ -37,7 +37,7 @@ class MainViewController: UIViewController, LocationManagerDelegate {
         super.viewWillAppear(animated)
         locationManager.requestLocation()
         
-        if let userName = UserDefaults.standard.string(forKey: USER_DEFAULTS_USER_NAME_KEY) {
+        if let userName = UserManager.instance.getUserName() {
             helloUserLabel.text = "Hello \(userName)"
             insertNameButton.isHidden = true
             startGameButton.isHidden = false
@@ -51,6 +51,21 @@ class MainViewController: UIViewController, LocationManagerDelegate {
     
     
     @IBAction func startGameButtonPressed(_ sender: UIButton) {
+        guard userSide != nil else {
+            showMissingLocationAlert()
+            return
+        }
+        
+        performSegue(withIdentifier: MAIN_TO_GAME_SEGUE_IDENTIFIER, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == MAIN_TO_GAME_SEGUE_IDENTIFIER {
+            if let destinationVC = segue.destination as? GameViewController {
+                destinationVC.userName = UserManager.instance.getUserName()
+                destinationVC.userSide = self.userSide
+            }
+        }
     }
     
     func didUpdateLocation(location: Location) {
@@ -101,10 +116,12 @@ class MainViewController: UIViewController, LocationManagerDelegate {
             print("nameInputDialog - confirm button is pressed")
             nameInputDialog.dismiss(animated: true)
             if let userText = nameTextField?.text {
-                UserDefaults.standard.set(userText, forKey: self?.USER_DEFAULTS_USER_NAME_KEY ?? "")
+                UserManager.instance.setUserName(userName: userText)
                 self?.helloUserLabel.text = "Hello \(userText)"
                 self?.insertNameButton.isHidden = true
                 self?.startGameButton.isHidden = false
+
+                
             }
         })
         
@@ -135,6 +152,14 @@ class MainViewController: UIViewController, LocationManagerDelegate {
         // show dialog
         present(nameInputDialog, animated: true)
     }
+    
+    func showMissingLocationAlert() {
+        let alert = UIAlertController(title: "Location Not Ready", message: "We couldn't determine your side because location access is not enabled. Please allow location access in Settings and try again.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+    
+    
     
 }
 

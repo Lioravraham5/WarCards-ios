@@ -33,11 +33,11 @@ class GameViewController: UIViewController {
     var userNameOpt: String?
     var userSideOpt: String? // East or West
     
-    var ticker: Ticker?
+    var gameTicker: Ticker?
     var gameManager: GameManager!
     var isPaused = false
     var elapsedTime = 0
-    var timeLabelTimer: Timer?
+    var timeLabelTicker: Ticker?
     
     
     override func viewDidLoad() {
@@ -65,16 +65,34 @@ class GameViewController: UIViewController {
             self.startGameLoop()
             self.startGameClock()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
+        // Stop both timers when leaving screen
+        gameTicker?.stop()
+        timeLabelTicker?.stop()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        // Resume both timers only if not paused
+        if !isPaused {
+            gameTicker?.start()
+            timeLabelTicker?.start()
+        }
     }
     
     @IBAction func stopOrResumeButtonPressed(_ sender: UIButton) {
         if isPaused {
-            ticker?.start()
+            gameTicker?.start()
+            timeLabelTicker?.start()
             stopOrResumeButton.setImage(UIImage(systemName: "stop.fill"), for: .normal)
         } else {
-            ticker?.stop()
+            gameTicker?.stop()
+            timeLabelTicker?.stop()
             stopOrResumeButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
         }
         
@@ -106,11 +124,11 @@ class GameViewController: UIViewController {
     }
     
     func startGameLoop() {
-        ticker = Ticker(interval: 5.0, callback: { [weak self] in
+        gameTicker = Ticker(interval: 5.0, callback: { [weak self] in
             self?.playRound()
         })
         
-        ticker?.start()
+        gameTicker?.start()
     }
     
     func playRound() {
@@ -137,7 +155,8 @@ class GameViewController: UIViewController {
     }
     
     func startGameClock() {
-        timeLabelTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {[weak self] _ in
+        
+        timeLabelTicker = Ticker(interval: 1.0, callback: {[weak self] in
             guard let self = self, !self.isPaused else {
                 return
             }
@@ -146,12 +165,14 @@ class GameViewController: UIViewController {
             let minutes = self.elapsedTime / 60
             let second = self.elapsedTime % 60
             self.timeLabel.text = String(format: "%02d:%02d", minutes, second)
-        }
+        })
+        
+        timeLabelTicker?.start()
     }
     
     func stopGame() {
-        ticker?.stop()
-        timeLabelTimer?.invalidate()
+        gameTicker?.stop()
+        timeLabelTicker?.stop()
     }
     
     func finishGame() {

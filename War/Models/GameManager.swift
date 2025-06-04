@@ -24,6 +24,7 @@ class GameManager  {
     }
     
     func drawCards() -> (Card, Card) {
+        print("GameManager: roundCounter = \(roundCount)")
         let cardWest = CardData.allCards.randomElement()!
         let cardEast = CardData.allCards.randomElement()!
         

@@ -1,10 +1,9 @@
 //
-//  File.swift
+//  Ticker.swift
 //  War
 //
-//  Created by Student17 on 30/05/2025.
+//  Created by Student17 on 04/06/2025.
 //
-
 import Foundation
 
 class Ticker {
@@ -44,4 +43,3 @@ class Ticker {
         timer = nil
     }
 }
-

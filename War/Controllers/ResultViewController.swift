@@ -13,24 +13,27 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     
+    var winnerOpt: String?
+    var userScoreOpt: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let winner = winnerOpt, let userScore = userScoreOpt {
+            winnerLabel.text = "Winner: \(winner)"
+            scoreLabel.text = "Your Score: \(userScore)"
+            
+            print("winner = \(winner)")
+            print("player score = \(userScore)")
+        } else {
+            winnerLabel.text = "Winner: N/A"
+            scoreLabel.text = "Your Score: N/A"
+        }
     }
     
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
+        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

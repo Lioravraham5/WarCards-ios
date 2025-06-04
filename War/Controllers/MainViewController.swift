@@ -62,8 +62,8 @@ class MainViewController: UIViewController, LocationManagerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == MAIN_TO_GAME_SEGUE_IDENTIFIER {
             if let destinationVC = segue.destination as? GameViewController {
-                destinationVC.userName = UserManager.instance.getUserName()
-                destinationVC.userSide = self.userSide
+                destinationVC.userNameOpt = UserManager.instance.getUserName()
+                destinationVC.userSideOpt = self.userSide
             }
         }
     }

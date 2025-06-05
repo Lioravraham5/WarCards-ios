@@ -39,6 +39,7 @@ class GameViewController: UIViewController {
     var elapsedTime = 0
     var timeLabelTicker: Ticker?
     
+    var didStartMusic = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,13 +74,26 @@ class GameViewController: UIViewController {
         // Stop both timers when leaving screen
         gameTicker?.stop()
         timeLabelTicker?.stop()
+        
+        // Stop music when leaving screen completely
+        SoundManager.instance.stopBackgroundMusic()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // Start background music only once
+        if !didStartMusic {
+            SoundManager.instance.playBackgroundMusic(fileName: "background_music", fileExtension: "mp3")
+            didStartMusic = true
+        }
+        
         // Resume both timers only if not paused
         if !isPaused {
+            if didStartMusic {
+                SoundManager.instance.resumeBackgroundMusic()
+            }
+            
             gameTicker?.start()
             timeLabelTicker?.start()
         }
@@ -89,10 +103,12 @@ class GameViewController: UIViewController {
         if isPaused {
             gameTicker?.start()
             timeLabelTicker?.start()
+            SoundManager.instance.resumeBackgroundMusic()
             stopOrResumeButton.setImage(UIImage(systemName: "stop.fill"), for: .normal)
         } else {
             gameTicker?.stop()
             timeLabelTicker?.stop()
+            SoundManager.instance.pauseBackgroundMusic()
             stopOrResumeButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
         }
         
@@ -140,6 +156,7 @@ class GameViewController: UIViewController {
         
         let (cardW, cardE) = gameManager.drawCards()
         
+        SoundManager.instance.playEffect(fileName: "flip_card", fileExtension: "mp3")
         cardWest.image = UIImage(named: cardW.imageName)
         cardEast.image = UIImage(named: cardE.imageName)
         scoreWest.text = "\(gameManager.scoreWest)"

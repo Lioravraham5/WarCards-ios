@@ -1,13 +1,11 @@
 # 🃏 Cards War - iOS Card Game App
 **Cards War** is a classic two-player card game implemented as an iOS application using Swift and the MVC design pattern. In this game, you compete against the computer in a battle of randomly drawn cards, enhanced with sound effects, location-based logic, and a timer-based game flow.
 
-## Light Mode:
+### Light Mode:
 https://github.com/user-attachments/assets/0359fa53-cb1f-44b9-b135-1c517c4a7e31
 
-## Dark Mode:
+### Dark Mode:
 https://github.com/user-attachments/assets/5e5df423-d37a-4b24-9e66-aecf63f7f0b1
-
-
 
 ## 📲 Overview
 War is a fun, interactive card game that pits the player against a computer opponent in a series of 10 rounds. Each round, both players flip a card. The card with the higher power wins the round and earns a point. After 10 rounds, the player with the most points is declared the winner — unless there's a tie, in which case the PC wins by default.
